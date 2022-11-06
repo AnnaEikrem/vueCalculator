@@ -1,27 +1,23 @@
 <template>
-	<section class="converter-main">
-		<h1 class="converter-main__headline">Length converter</h1>
+	<section class="converter">
+		<h1 class="converter__headline">Length converter</h1>
 
-		<div type="text" name="converterInput" id="converterInput">
-			{{ showingResult ? currentResult : currentInput}}
+		<div>
+			<h3>Meters --> Imperial measures</h3>
 		</div>
 
-		<select name="inputType" id="inputType">
-			<option value="milimeter">Milimeter</option>
-			<option value="centimeter">Centimeter</option>
-			<option value="meter">Meter</option>
-			<option value="kilometer">Kilometer</option>
-		</select>
+		<div class="converter__input">
+			<input class="converter__input-meters" type="number" placeholder="m" v-model="valueInput">
+		</div>
 
-		<div type="text" name="converterResult" id="converterResult">
+		<div class="converter__output">
+			<h3 class="converter__output-name">Inches</h3>
+			<h3 class="converter__output-name">Miles</h3>
+			<h3 class="converter__output-name">Inches</h3>
+
 			
 		</div>
-		<select name="resultType" id="resultType">
-			<option value="milimeter">Milimeter</option>
-			<option value="centimeter">Centimeter</option>
-			<option value="meter">Meter</option>
-			<option value="kilometer">Kilometer</option>
-		</select>
+
 	</section>
 </template>
 
@@ -33,7 +29,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter&display=swap');
 
-	.converter-main {
+	.converter {
 		height: 100%;
 		width: 50%;
 		background: #d2a24c;
@@ -42,43 +38,28 @@
 		font-size: 0.8rem;
 	}
 
-	.converter-main__headline {
+	.converter__headline {
 		text-align: center;
 		font-family: 'Bungee Shade', cursive;
 		color: #3e3126;
 		font-size: 1.1rem;
 		margin-top: 1rem;
-
 	}
 
-	#converterInput, #converterResult, #inputType, #resultType {
+	/* .converter__name {
+		color: red;
+		width: 100%;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		background: #fff;
-	} 
-
-	#converterInput, #converterResult {
+		justify-content: left;
+	} */
+/* 
+	.converter__output {
 		width: 80%;
 		height: 2rem;
 		padding: 1rem;
-		margin: 2rem 1.5rem 0 1.5rem;
+		margin: 2rem 2rem 1rem 1.5rem;
 		border: 0.2rem solid #6f5643;
+		background: #fff;
 		border-radius: 0.5rem;
-	}
-
-	#inputType, #resultType {
-		width: 80%;
-		font-size: 0.7rem;
-		height: auto;
-		padding: 0.2rem;
-		margin: 0.5rem 1.5rem 1rem 1.5rem;
-		border-radius: 0.25rem;
-		transition: 0.2s;
-		cursor: pointer;
-	}
-
-	#inputType:hover, #resultType:hover {
-		background-color: rgb(141, 206, 141);
-	}
-</style>
+	}*/
+</style> 

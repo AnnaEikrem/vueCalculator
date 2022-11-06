@@ -1,45 +1,45 @@
 <template>
-	<section class="calculator-main">
-		<h1 class="calculator-main__headline">Calculator</h1>
+	<section class="calculator">
+		<h1 class="calculator__headline">Calculator</h1>
 
-		<div class="calculator-main__output">
+		<div class="calculator__output">
 			{{ showingResult ? currentResult : currentInput}}
 		</div>
 
-		<div class="calculator-main__digits">
-			<button @click="clearResult" class="calculator-main__button calculator-main__clear">C</button>
+		<div class="calculator__digits">
+			<button @click="clearResult" class="calculator__button calculator__clear">C</button>
 
-			<button @click="handleOperatorInput('/')" class="calculator-main__button calculator-main__operator">/</button>
+			<button @click="handleOperatorInput('/')" class="calculator__button calculator__operator">/</button>
 
-			<button @click="handleDigitInput(7)" class="calculator-main__button">7</button>
+			<button @click="handleDigitInput(7)" class="calculator__button">7</button>
 
-			<button @click="handleDigitInput(8)" class="calculator-main__button">8</button>
+			<button @click="handleDigitInput(8)" class="calculator__button">8</button>
 
-			<button @click="handleDigitInput(9)" class="calculator-main__button">9</button>
+			<button @click="handleDigitInput(9)" class="calculator__button">9</button>
 
-			<button @click="handleOperatorInput('*')" class="calculator-main__button calculator-main__operator">*</button>
+			<button @click="handleOperatorInput('*')" class="calculator__button calculator__operator">*</button>
 
-			<button @click="handleDigitInput(4)" class="calculator-main__button">4</button>
+			<button @click="handleDigitInput(4)" class="calculator__button">4</button>
 
-			<button @click="handleDigitInput(5)" class="calculator-main__button">5</button>
+			<button @click="handleDigitInput(5)" class="calculator__button">5</button>
 
-			<button @click="handleDigitInput(6)" class="calculator-main__button">6</button>
+			<button @click="handleDigitInput(6)" class="calculator__button">6</button>
 
-			<button @click="handleOperatorInput('-')" class="calculator-main__button calculator-main__operator">-</button>
+			<button @click="handleOperatorInput('-')" class="calculator__button calculator__operator">-</button>
 
-			<button @click="handleDigitInput(1)" class="calculator-main__button">1</button>
+			<button @click="handleDigitInput(1)" class="calculator__button">1</button>
 
-			<button @click="handleDigitInput(2)" class="calculator-main__button">2</button>
+			<button @click="handleDigitInput(2)" class="calculator__button">2</button>
 
-			<button @click="handleDigitInput(3)" class="calculator-main__button">3</button>
+			<button @click="handleDigitInput(3)" class="calculator__button">3</button>
 
-			<button @click="handleOperatorInput('+')" class="calculator-main__button calculator-main__operator">+</button>
+			<button @click="handleOperatorInput('+')" class="calculator__button calculator__operator">+</button>
 
-			<button @click="handleDigitInput(0)" class="calculator-main__button calculator-main__zero">0</button>
+			<button @click="handleDigitInput(0)" class="calculator__button calculator__zero">0</button>
 
-			<button @click="handleDigitInput('.')" class="calculator-main__button">,</button>
+			<button @click="handleDigitInput('.')" class="calculator__button">,</button>
 
-			<button @click="handleEqualsInput" class="calculator-main__button calculator-main__operator">=</button> 
+			<button @click="handleEqualsInput" class="calculator__button calculator__operator">=</button> 
 
 		</div>
 	</section>
@@ -155,14 +155,14 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter&display=swap');
 
-	.calculator-main {
+	.calculator {
 		height: 100%;
 		width: 50%;
 		background: #d2a24c;
 		padding: 0.75rem;
 	}
 
-	.calculator-main__headline {
+	.calculator__headline {
 		font-family: 'Bungee Shade', cursive;
 		color: #281b10;
 		margin-top: 1rem;
@@ -170,7 +170,7 @@
 		text-align: center;
 	}
 
-	.calculator-main__output {
+	.calculator__output {
 		display: flex;
 		align-items: center;
 		justify-content: right;
@@ -187,14 +187,14 @@
 		white-space: nowrap;
 	}
 
-	.calculator-main__digits {
+	.calculator__digits {
 		width: 100%;
 		height: 55%;
 		display: grid;
 		grid-template-columns: repeat(4, 25%);	
 	}
 
-	.calculator-main__button {
+	.calculator__button {
 		width: 90%;
 		height: 90%;
 		padding: 0.1rem;
@@ -208,21 +208,21 @@
 		border: 0.2rem solid #376659;
 	}
 
-	.calculator-main__zero {
+	.calculator__zero {
 		width: 95%;
 		grid-column: span 2;
 	}
 
-	.calculator-main__clear {
+	.calculator__clear {
 		width: 95%;
 		grid-column: span 3;
 	}
 
-	.calculator-main__button:hover {
+	.calculator__button:hover {
 		opacity: 60%;
 	}
 
-	.calculator-main__operator, .calculator-main__clear {
+	.calculator__operator, .calculator__clear {
 		background: #eca58b;
 		border: 0.2rem solid rgb(242, 90, 90);
 	}
