@@ -166,7 +166,7 @@
 		font-family: 'Bungee Shade', cursive;
 		color: #000;
 		margin-top: 1rem;
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 		text-align: center;
 	}
 

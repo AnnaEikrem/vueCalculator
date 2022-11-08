@@ -1,6 +1,6 @@
 <template>
 	<section class="converter">
-		<h1 class="converter__headline">Length converter</h1>
+		<h1 class="converter__headline">Length <br>converter</h1>
 
 		<div class="">
 			<h3 class="converter__output-name" >Meters -></h3>
@@ -68,9 +68,8 @@
 		text-align: center;
 		font-family: 'Bungee Shade', cursive;
 		color: #000;
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 		margin-top: 1rem;
-		margin-bottom: 1.8rem;
 	}
 
 	.converter__input, .converter__output {
@@ -78,7 +77,7 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 80%;
-		margin-bottom: 1rem;
+
 	} 
 
 	.converter__output-name {
@@ -92,6 +91,7 @@
 	.valueField {
 		width: 100%;
 		margin: 0.2rem;
+		margin-bottom: 0.8rem;
 		padding: 0.3rem;
 		background: #fff;
 		border: 0.2rem solid #6f5643;
