@@ -164,7 +164,7 @@
 
 	.calculator__headline {
 		font-family: 'Bungee Shade', cursive;
-		color: #281b10;
+		color: #000;
 		margin-top: 1rem;
 		font-size: 1.1rem;
 		text-align: center;

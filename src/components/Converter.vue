@@ -2,22 +2,22 @@
 	<section class="converter">
 		<h1 class="converter__headline">Length converter</h1>
 
-		<div>
-			<h3 class="converter__output-name">Meters --></h3>
+		<div class="">
+			<h3 class="converter__output-name" >Meters -></h3>
 		</div>
 
-		<div class="converter__input">
+		<div class="converter__input ">
 			<input class="converter__input-meters valueField" type="number" placeholder="Type" v-model="valueInput">
 		</div>
 
-		<div class="converter__output">
+		<div class="converter__output ">
 			<h3 class="converter__output-name">Feet</h3>
 			<div class="converter__output valueField">{{ valueFeet }}</div>
 
-			<h3 class="converter__output-name">Inches</h3>
+			<h3 class="converter__output-name ">Inches</h3>
 			<div class="converter__output valueField">{{ valueInches }}</div>
 
-			<h3 class="converter__output-name">Miles</h3>
+			<h3 class="converter__output-name ">Miles</h3>
 			<div class="converter__output valueField">{{ valueMiles }}</div>
 		</div>
 
@@ -53,7 +53,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
 
 	.converter {
 		height: 100%;
@@ -67,9 +67,10 @@
 	.converter__headline {
 		text-align: center;
 		font-family: 'Bungee Shade', cursive;
-		color: #3e3126;
+		color: #000;
 		font-size: 1.1rem;
 		margin-top: 1rem;
+		margin-bottom: 1.8rem;
 	}
 
 	.converter__input, .converter__output {
@@ -77,12 +78,15 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 80%;
+		margin-bottom: 1rem;
 	} 
 
 	.converter__output-name {
 		margin: 0.6rem auto 0.1rem 0.5rem;
-		color: rgb(45, 45, 45);
-		font-family: 'Space Mono', monospace;
+		color: #000;
+		font-size: 1rem;
+		font-family: 'Bungee Hairline', cursive;
+		font-style: italic;
 	}
 
 	.valueField {

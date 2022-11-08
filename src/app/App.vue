@@ -29,12 +29,6 @@
 		font-size: 20px;
 	}
 
-	/* body {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	} */
-
 	.container {
 		position: relative;
 		width: 80%;
