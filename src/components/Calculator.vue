@@ -2,8 +2,8 @@
 	<section class="calculator">
 		<h1 class="calculator__headline">Calculator</h1>
 
-		<div class="calculator__output">
-			{{ showingResult ? currentResult : currentInput}}
+		<div class="calculator__outputs">
+			{{ showingResult ? currentResult : currentInput }}
 		</div>
 
 		<div class="calculator__digits">
@@ -170,7 +170,7 @@
 		text-align: center;
 	}
 
-	.calculator__output {
+	.calculator__outputs {
 		display: flex;
 		align-items: center;
 		justify-content: right;

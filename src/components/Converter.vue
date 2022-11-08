@@ -3,31 +3,57 @@
 		<h1 class="converter__headline">Length converter</h1>
 
 		<div>
-			<h3>Meters --> Imperial measures</h3>
+			<h3 class="converter__output-name">Meters --></h3>
 		</div>
 
 		<div class="converter__input">
-			<input class="converter__input-meters" type="number" placeholder="m" v-model="valueInput">
+			<input class="converter__input-meters valueField" type="number" placeholder="Type" v-model="valueInput">
 		</div>
 
 		<div class="converter__output">
-			<h3 class="converter__output-name">Inches</h3>
-			<h3 class="converter__output-name">Miles</h3>
-			<h3 class="converter__output-name">Inches</h3>
+			<h3 class="converter__output-name">Feet</h3>
+			<div class="converter__output valueField">{{ valueFeet }}</div>
 
-			
+			<h3 class="converter__output-name">Inches</h3>
+			<div class="converter__output valueField">{{ valueInches }}</div>
+
+			<h3 class="converter__output-name">Miles</h3>
+			<div class="converter__output valueField">{{ valueMiles }}</div>
 		</div>
 
 	</section>
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				valueInput: 0
+			}
+		},
+
+		computed: {
+			valueFeet() {
+				return (this.valueInput * 3.281);
+			},
+		
+			valueInches() {
+				return (this.valueInput * 39.370);
+			},
+
+			valueMiles() {
+				return (this.valueInput * 0.0006213);
+			}
+		}
+	}
 
 </script>
 
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter&display=swap');
+
+
 
 	.converter {
 		height: 100%;
@@ -46,20 +72,25 @@
 		margin-top: 1rem;
 	}
 
-	/* .converter__name {
-		color: red;
-		width: 100%;
+	.converter__input, .converter__output {
 		display: flex;
-		justify-content: left;
-	} */
-/* 
-	.converter__output {
+		flex-direction: column;
+		justify-content: center;
 		width: 80%;
-		height: 2rem;
-		padding: 1rem;
-		margin: 2rem 2rem 1rem 1.5rem;
-		border: 0.2rem solid #6f5643;
+	} 
+
+	.converter__output-name {
+		margin: 0.6rem auto 0.1rem 0.5rem;
+		color: rgb(45, 45, 45);
+		font-family: 'Space Mono', monospace;
+	}
+
+	.valueField {
+		width: 100%;
+		margin: 0.2rem;
+		padding: 0.3rem;
 		background: #fff;
+		border: 0.2rem solid #6f5643;
 		border-radius: 0.5rem;
-	}*/
+	}
 </style> 

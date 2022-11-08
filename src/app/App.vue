@@ -29,14 +29,19 @@
 		font-size: 20px;
 	}
 
+	/* body {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	} */
+
 	.container {
 		position: relative;
-		width: 70%;
+		width: 80%;
 		height: 80vh;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		
 		margin: 3rem;
 		border-radius: 0.3rem;
 		border: 0.5rem solid #6f5643;
@@ -77,4 +82,5 @@
 		border-radius: 0 10px 10px 0;
 		z-index: 10;
 	}
+	
 </style>
